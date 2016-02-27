@@ -39,9 +39,9 @@ function sendJSONXMLHTTPRequest(url, objects, callback) {
             try {
                 if (xhr.status==200) {
                     //XXX: parse some JSON from the request!
-                    var response = JSON.Parse(xhr.responseText);
+                    var response = JSON.parse(xhr.responseText);
                     //XXX: Pass the data to the callback!
-                    if (callback != null) {
+                    if (callback) {
                         callback(response);
                     }
                     
